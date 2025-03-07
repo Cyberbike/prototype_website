@@ -95,7 +95,7 @@ button {
 }
 
 button:hover {
-    background-color: #e63e00;
+    background-color: #ff875b;
 }
 
 /* Text Box */
@@ -215,3 +215,8 @@ footer .fa {
   footer .fa:hover {
     opacity: 0.7;
   }
+
+  button{
+    border-radius: 5%;
+  }
+
