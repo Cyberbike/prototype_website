@@ -15,9 +15,13 @@
 body {
     background-color: #000;
     color: #fff;
+    padding-top: 60px; /* Adjust based on header height to prevent overlap */
+    
+    
 }
 
 /* Header - Only Logo */
+/* Header - Fixed to Top */
 header {
     background-color: #000;
     color: white;
@@ -25,7 +29,13 @@ header {
     justify-content: center;
     align-items: center;
     padding: 15px 20px;
+    position: fixed; /* Makes the header stick to the top */
+    top: 0; /* Stays at the top */
+    left: 0;
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensures it stays on top of other elements */
 }
+
 
 .logo {
     font-size: 24px;
@@ -49,12 +59,17 @@ header {
     display: flex;
     justify-content: center; /* Centers image */
     align-items: center;
+ 
+    overflow: hidden;
 }
 
 .hero-image img {
-    width: 50%; /* Adjust image size */
-    max-width: 50%;
+    width: 100%; /* Adjust image size */
+    max-width: 100%;
     height: auto;
+
+    object-fit: cover; /* Crops while covering the container */
+    
 }
 
 /* Text on Right - Shifted closer to image */
@@ -127,3 +142,76 @@ footer nav ul li a {
     color: white;
     text-decoration: none;
 }
+
+/* MOBILE RESPONSIVENESS */
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column-reverse; /* Stack text above the GIF */
+        justify-content: center; /* Center everything vertically */
+        align-items: center; /* Keep everything centered */
+        text-align: center;
+        gap: 10px; /* Reduce space between image and text */
+        padding: 20px;
+        height: 100vh; /* Ensure full screen height */
+        display: flex;
+    }
+
+    .hero-image {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero-image img {
+        width: 80%; /* Make the GIF take up most of the width */
+        max-width: 300px;
+        height: auto;
+    }
+
+    .hero-text {
+        width: 90%;
+        text-align: center; /* Center text */
+        margin: 0 auto; /* Center horizontally */
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center text vertically */
+        align-items: center;
+    }
+
+    /* Stack Images Vertically */
+    .images {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px; /* Space between images */
+    }
+
+    .images img {
+        width: 90%; /* Make them almost full-width */
+        max-width: 350px; /* Keep square aspect ratio */
+        height: auto;
+        aspect-ratio: 1/1; /* Force square images */
+        object-fit: cover;
+    }
+}
+
+a {
+    color:white;
+}
+
+footer .fa {
+    padding: 10px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+    background: #000; /* Pure black background */
+    color: white; /* Pure white text */
+  }
+  
+  footer .fa:hover {
+    opacity: 0.7;
+  }
