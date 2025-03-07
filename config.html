@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Bike Page</title>
+    <title>E-Bike Configurator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  
-  <!-- SEO Meta Tags -->
-  <meta name="description" content="Cyberglide - The most futuristic bike with over 100 miles of range. Experience the future of e-bikes.">
-  <meta name="keywords" content="cyberglide, e-bike, futuristic bike, electric bike, long range e-bike">
-  <meta name="author" content="cyberglide">
-
-  <!-- Open Graph Meta Tags for Social Media -->
-  <meta property="og:title" content="cyberglide - The Future of E-Bikes">
-  <meta property="og:description" content="Cyberglide - The most futuristic bike with over 100 miles of range. Experience the future of e-bikes.">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Cyberbike/website/main/image2.jpg">
-  <meta property="og:url" content="https://cyberglide.tech">
-  <meta property="og:type" content="website">
-
-  <!-- Twitter Card Meta Tags -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="cyberglide - The Future of E-Bikes">
-  <meta name="twitter:description" content="Cyberglide - The most futuristic bike with over 100 miles of range. Experience the future of e-bikes.">
-  <meta name="twitter:image" content="https://raw.githubusercontent.com/Cyberbike/website/main/image2.jpg">
-
-
-
 </head>
 <body>
     <header>
-        <h1 class="logo"><a href="index.html">E-Bike</a></h1>
+        <h1 class="logo"><a href="index.html">E-Bike Configurator</a></h1>
     </header>
 
-    <section class="hero">
-        
+    <section class="configurator">
+        <!-- Left Side - Image Preview -->
+        <div class="config-image">
+            <img id="bike-image" src="picture2.png" alt="E-Bike Preview">
+        </div>
+
+        <!-- Right Side - Options -->
+        <div class="config-options">
+            <h1>E-bike Builder</h1>
+            <p>Base Spec: Cost: $2000. 2 horsepower. Top Speed: 30 MPH. Range: 60 Miles. Weight: 24 LBS.
+            <h1>Finish:</h1>
+            <p></p>
+            <div class="row">
+                <button class="config-btn" data-option="frame-black">Black Package</button>
+                <button class="config-btn" data-option="frame-white">White Package</button>
+            </div>
+            <h1>Wheel:</h1>
+            <p>Weight: Carbon wheels reduce weight by 2 LBS</p>
+            <div class="row">
+                <button class="config-btn" data-option="wheels-sport">Sport Wheels</button>
+                <button class="config-btn" data-option="wheels-alloy">Sport Wheels Plus $90</button>
+                <button class="config-btn" data-option="wheels-carbon">Carbon Wheels $400</button>
+            </div>
+            <h1>Battery:</h1>
+            <p>Long range battery:  120 miles on single motor. 80 miles on double motor</p>
+            <div class="row">
+                <button class="config-btn" data-option="battery-standard">Standard Battery</button>
+                <button class="config-btn" data-option="battery-long">Long-Range Battery $200</button>
+            </div>
+            <h1>Motor:</h1>
+            <p>Double Motor: 4 horsepower. Topspeed: 50 MPH. Weight 26 LBS.</p>
+            <div class="row">
+                <button class="config-btn" data-option="seat-leather">Single Motor</button>
+                <button class="config-btn" data-option="seat-sport">Double Motor $200</button>
+            </div>
+        </div>
     </section>
-
-
-
- 
-    <footer>
-        <hr>
-        <br>
-        <br>
-        <p>&copy; 2025 E-Bike Company</p>
-        <a href="https://www.instagram.com/cyber.glide/?igsh=MWRhMXBybXNnMHY3aA%3D%3D" target="_blank" class="fa fa-instagram"></a>
-        <a href="https://www.youtube.com" target="_blank" class="fa fa-youtube"></a>
-        <a href="https://www.linkedin.com" target="_blank" class="fa fa-linkedin"></a>
-        <a href="https://twitter.com/cyberglide_" target="_blank" class="fa fa-twitter"></a>
-        <nav>
-            <ul>
-                <li><a href="about.html">About</a></li>
-                <li><a href="investor.html">Investors</a></li>
-                <li><a href="careers.html">Careers</a></li>
-               
-            </ul>
-        </nav>
-        <br>
-        <hr>
-    </footer>
 
     <script src="script.js"></script>
 </body>
