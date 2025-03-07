@@ -220,3 +220,80 @@ footer .fa {
     border-radius: 5%;
   }
 
+
+/* Configurator Layout */
+.configurator {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 20px;
+    background-color: #fff;
+}
+
+/* Left Side - Image Display */
+.config-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f5f5;
+    padding: 20px;
+}
+
+.config-image img {
+    max-width: 90%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Right Side - Buttons */
+.config-options {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 15px;
+    padding: 20px;
+    background-color: #fff;
+    color:#000;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.config-btn {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: 2px solid #333;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    color:#000;
+}
+
+/* Clicked Button State */
+.config-btn.active {
+    background-color: #ff4500;
+    color: white;
+    /* border: 2px solid #ff4500; */
+    border: 2px solid #333;
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .configurator {
+        flex-direction: column;
+    }
+
+    .row {
+        flex-wrap: wrap;
+    }
+
+    .config-image {
+        order: 2;
+    }
+}
+
